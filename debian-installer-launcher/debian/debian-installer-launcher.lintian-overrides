@@ -1,0 +1,3 @@
+debian-installer-launcher: debconf-is-not-a-registry usr/share/debian-installer-launcher/debconf_kernel.sh
+debian-installer-launcher: debconf-is-not-a-registry usr/share/debian-installer-launcher/debconf_mode.sh
+debian-installer-launcher: no-debconf-config

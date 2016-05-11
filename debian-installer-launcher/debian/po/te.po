@@ -1,0 +1,60 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# translation of te.po to Telugu
+# Telugu translation for debian-installer
+# This file is distributed under the same license as the debian-installer package.
+# వీవెన్ (Veeven) <launchpad.net>, 2007.
+# Y Giridhar Appaji Nag <giridhar@appaji.net>, 2008.
+# Arjuna Rao Chavala <arjunaraoc@gmail.com>,2010
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+msgid ""
+msgstr ""
+"Project-Id-Version: te\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2011-01-19 21:00+0530\n"
+"Last-Translator: Arjuna Rao Chavala <arjunaraoc@gmail.com>\n"
+"Language-Team: Telugu <debian-in-workers@lists.alioth.debian.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "కెర్నెల్  రూపాంతరము సరిపోలలేదు"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr "ప్రత్యక్ష వ్యవస్థ కెర్నెల్ మరియు  స్థాపిత  కెర్నెల్  సరిపోలలేదు"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"Installer వాడుటకు ప్రత్యక్ష కెర్నెల్ రూపాంతరం   (${LIVE_KERNEL})  మరియు  స్థాపిత   కెర్నెల్  "
+"(${DI_KERNEL}) సరిపోలాలి."
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "సరిపోయిన (${DI_KERNEL}) కెర్నెల్ తో  తిరిగి బూట్ చేయి."

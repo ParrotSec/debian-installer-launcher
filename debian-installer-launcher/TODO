@@ -1,0 +1,15 @@
+Known Bugs
+----------
+
+  * See Bug Tracking System:
+    http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=debian-installer
+
+  * Depending on the terminal that is being used, d-i doesn't show
+    the correct colors (black/white insted of blue/red).
+
+TODO
+----
+
+  * Try using a cgroup as a better way to determine syslogd/klogd
+    PIDs to kill in plugins/live live_cleanup() instead of kludgy fuser
+    method (thanks to Ben Hutchings for the suggestion).

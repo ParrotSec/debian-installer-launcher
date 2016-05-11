@@ -1,0 +1,79 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# Simplified Chinese translation for Debian Installer.
+#
+# Copyright (C) 2003-2008 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+# Translated by Yijun Yuan (2004), Carlos Z.F. Liu (2004,2005,2006),
+# Ming Hua (2005,2006,2007,2008), Xiyue Deng (2008), Kov Chai (2008),
+# Kenlen Lai (2008), WCM (2008), Ren Xiaolei (2008).
+#
+#
+# Translations from iso-codes:
+#   Tobias Toedter <t.toedter@gmx.net>, 2007.
+#     Translations taken from ICU SVN on 2007-09-09
+#
+#   Free Software Foundation, Inc., 2002, 2003, 2007, 2008.
+#   Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
+#   Translations taken from KDE:
+#   - Wang Jian <lark@linux.net.cn>, 2000.
+#   - Carlos Z.F. Liu <carlosliu@users.sourceforge.net>, 2004 - 2006.
+#   LI Daobing <lidaobing@gmail.com>, 2007, 2008, 2009, 2010.
+#   YunQiang Su <wzssyqa@gmail.com>, 2011.
+#
+#   Mai Hao Hui <mhh@126.com>, 2001 (translations from galeon)
+# YunQiang Su <wzssyqa@gmail.com>, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2011-08-11 11:13+0800\n"
+"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "内核版本不匹配"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr "Live 系统的内核和安装程序的内核不匹配"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"此安装程序只能在 Live 系统的内核版本 (${LIVE_KERNEL}) 和安装程序的内核版本 "
+"(${DI_KERNEL}) 相同时才能使用。"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "请使用正确的内核  (${DI_KERNEL}) 重启。"

@@ -1,0 +1,4 @@
+?package(debian-installer-launcher):needs="X11" section="Applications/System/Administration"\
+  title="Live Installer Launcher" longtitle="Debian Installer desktop launcher"\
+  description="This is a desktop launcher for Debian Installer images. It is intended to be used on Debian Live systems."\
+  command="su-to-root -X -c /usr/sbin/debian-installer-launcher" icon="/usr/share/pixmaps/debian-installer-launcher.xpm"

@@ -1,0 +1,12 @@
+Debian-installer-launcher hooks
+-------------------------------
+
+You can put script files in this directory and they will be called by
+various hooks of debian-installer-launcher. The hook name is given as
+first parameter when the script is executed.
+
+Existing hooks:
+- startup: called right at the start, even before the "prepare" step of
+  the plugin used.
+- cleanup: called at the very end, once all plugins have cleaned up. Those
+  hooks are executed in reverse order.

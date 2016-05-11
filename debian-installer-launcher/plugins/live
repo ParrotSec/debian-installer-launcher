@@ -1,0 +1,127 @@
+#!/bin/sh
+
+LIVE_TERMINAL=""
+
+live_usage()
+{
+	cat <<EOF
+ 'live' plugin:
+
+   WARNING: To use the installer without rebooting, the current kernel and the
+            installer's kernel must have the same version.
+
+   -t, --text    Force use of text installer
+   -e, --expert  Use expert installation mode
+EOF
+}
+
+live_prepare()
+{
+	for arg in $@; do
+		case "$arg" in
+			-t|--text)
+				TEXT=true
+				export TEXT
+				;;
+
+			-e|--expert)
+				EXPERT=true
+				export EXPERT
+				;;
+		esac
+	done
+
+	if [ -z "$DISPLAY" ]; then
+	    TEXT=true
+	    export TEXT
+	fi
+
+	if [ "$TEXT" != true ]; then
+		# Checking for x11
+		if [ -n "$DISPLAY" ]; then
+			# Checking for debconf frontend (gnome)
+			if dpkg -s libgnome2-perl > /dev/null 2>&1; then
+				DEBIAN_FRONTEND=gnome
+				export DEBIAN_FRONTEND
+			fi
+		fi
+	else
+		DI_FRONTEND=newt
+		export DI_FRONTEND
+		[ "$TEXT" = true ] && export DEBIAN_FRONTEND=text
+	fi
+
+	# Checking for debconf frontend (LIVE_TERMINAL fallback)
+	if [ -z $DEBIAN_FRONTEND ]; then
+		LIVE_TERMINAL="x-terminal-emulator -e"
+	fi
+
+	# Find an debian-installer initrd, preferably the gtk one
+	for IMAGE in /lib/live/mount/medium/install/gtk/initrd.gz /lib/live/mount/medium/install/initrd.gz; do
+		[ -e $IMAGE ] && break
+	done
+
+	[ ! -e $IMAGE ] && echo "no suitable d-i initrd image found, aborting." && return 1
+
+	echo "Loading debian-installer..."
+
+	# Create the temporary directory and mount a tmpfs on it to ease cleanup
+	mkdir -p /lib/live/installer
+	mount -t tmpfs none /lib/live/installer
+
+	# Unpack the initrd
+	cd /lib/live/installer
+	zcat $IMAGE | cpio -id > /dev/null 2>&1
+
+	$LIVE_TERMINAL /usr/share/debian-installer-launcher/debconf_kernel.sh || return 1
+
+	# Preseeding shutdown command
+	cat >> preseed.cfg << EOF
+# Select udeb for installation to allow exiting the installer
+d-i anna/choose_modules string di-utils-exit-installer
+# Ask question regardless from that it's preseeded above
+d-i anna/choose_modules seen false
+# Skip the exit timeout
+d-i di-utils-reboot/really_reboot boolean false
+EOF
+
+	# Preseeding installer expert mode
+	if [ "$EXPERT" = true ]; then
+		cat >> preseed.cfg << EOF
+# Setting expert mode
+d-i debconf/priority select low
+debconf debconf/priority select low
+EOF
+	fi
+}
+
+live_cleanup () {
+	# Stopping syslogd/klogd
+	# These processes are assumed to be the only users of busybox within the chroot
+	# which is a bit of a grubby way to identify them, but holds true for now.
+	fuser -k /lib/live/installer/bin/busybox > /dev/null 2>&1 || true
+
+	# Remove unpacked initrd
+	cd
+	umount -l /lib/live/installer
+	rm -f /tmp/debian-installer
+}
+
+live_run()
+{
+	# Bindmount installer media
+	mkdir -p /lib/live/installer/cdrom
+	mount -o bind /lib/live/mount/medium /lib/live/installer/cdrom
+
+	# Bindmount filesytem
+	for fs in /dev /dev/pts /proc /sys /tmp; do
+		mount -o bind $fs /lib/live/installer/$fs
+	done
+
+	if [ -n "$DISPLAY" ]; then
+		xhost +local:
+	fi
+
+	# Launching debian-installer
+	/usr/share/debian-installer-launcher/debian-installer.sh
+}

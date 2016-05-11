@@ -1,0 +1,25 @@
+Source: debian-installer-launcher
+Section: utils
+Priority: optional
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Uploaders:
+ Ben Armstrong <synrg@sanctuary.nslug.ns.ca>,
+ Otavio Salvador <otavio@debian.org>,
+ Christian Perrier <bubulle@debian.org>,
+ Iain R. Learmonth <irl@debian.org>
+Build-Depends: debhelper (>= 9), po-debconf
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/d-i/debian-installer-launcher.git
+Vcs-Git: https://anonscm.debian.org/git/d-i/debian-installer-launcher.git
+
+Package: debian-installer-launcher
+Section: utils
+Architecture: all
+Depends: ${misc:Depends}, menu, psmisc, xterm | x-terminal-emulator, sudo
+Suggests: kexec-tools
+Description: Debian Installer desktop launcher
+ This is a desktop launcher for Debian Installer images. It is intended to be
+ used on Debian Live systems.
+ .
+ You probably do not want to install this package onto a non-live system,
+ although it will do no harm.

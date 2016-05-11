@@ -1,0 +1,72 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# translation of pa.po to Punjabi
+#
+# Debian Installer master translation file template
+# Don't forget to properly fill-in the header of PO files#
+# Debian Installer translators, please read the D-I i18n documentation
+# in doc/i18n/i18n.txt#
+#
+#
+# Translations from iso-codes:
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam <apreet.alam@gmail.com>, 2006.
+# A S Alam <aalam@users.sf.net>, 2006, 2007.
+# A S Alam <aalam@users.sf.net>, 2007, 2010.
+# Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
+# Amanpreet Singh Brar <aalam@users.sf.net>, 2008.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2009.
+# Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2009, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: pa\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2012-05-06 12:14+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "ਕਰਨਲ ਵਰਜਨ ਮਿਲਦਾ ਨਹੀਂ"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr "ਲਾਈਵ ਸਿਸਟਮ ਕਰਨਲ ਤੇ ਇੰਸਟਾਲਰ ਕਰਨਲ ਮਿਲਦੇ ਨਹੀਂ ਹਨ"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"ਇੰਸਟਾਲਰ ਕੇਵਲ ਤਾਂ ਹੀ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਜੇ ਲਾਈਵ ਸਿਸਟਮ ਦਾ ਕਰਨਲ ਵਰਜਨ (${LIVE_KERNEL}) "
+"ਤੇ ਇੰਸਟਾਲਰ ਦਾ (${DI_KERNEL}) ਇੱਕੋ ਹੋਣ।"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "ਠੀਕ ਕਰਨਲ (${DI_KERNEL}) ਨਾਲ ਮੁੜ-ਚਾਲੂ ਕਰੋ ਜੀ।"

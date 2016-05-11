@@ -1,0 +1,66 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# Catalan messages for debian-installer.
+# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010, 2012 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008, 2010, 2012.
+# Guillem Jover <guillem@debian.org>, 2005, 2007.
+#
+# Translations from iso-codes:
+# Alastair McKinstry <mckinstry@computer.org>, 2001.
+# Free Software Foundation, Inc., 2002,2004,2006
+# Orestes Mas i Casals <orestes@tsc.upc.es>, 2004-2006. (orestes: He usat la nomenclatura de http://www.traduim.com/)
+# Softcatalà <info@softcatala.org>, 2000-2001
+# Toni Hermoso Pulido <toniher@softcatala.cat>, 2010.
+# Traductor: Jordi Ferré <jordiferre@catalonia.altranet.fr>
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer wheezy\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2012-10-18 18:34+0200\n"
+"Last-Translator: Jordi Mallach <jordi@debian.org>\n"
+"Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "Versions diferents del nucli"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr "Els nuclis del sistema autònom i de l'instal·lador no concorden"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"Només es pot emprar l'instal·lador si la versió del nucli del sistema "
+"autònom (${LIVE_KERNEL}) i de l'instal·lador (${DI_KERNEL}) és la mateixa."
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "Torneu a iniciar amb el nucli correcte (${DI_KERNEL})."

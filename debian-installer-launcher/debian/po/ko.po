@@ -1,0 +1,59 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# Korean messages for debian-installer.
+# Copyright (C) 2003,2004,2005,2008 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+# Changwoo Ryu <cwryu@debian.org>, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2011-03-09 02:14+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "커널 버전이 다릅니다"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr "라이브 시스템의 커널과 설치 프로그램 커널이 다릅니다"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"라이브 시스템의 커널 버전이 (${LIVE_KERNEL}) 설치 프로그램의 커널 버전과 "
+"(${DI_KERNEL}) 같을 경우에만 설치 프로그램을 사용할 수 있습니다."
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "올바른 커널로 (${DI_KERNEL}) 다시 부팅하십시오."

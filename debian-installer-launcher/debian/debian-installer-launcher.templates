@@ -1,0 +1,16 @@
+Template: debian-installer-launcher/kernel-mismatch/title
+Type: title
+# :sl3:
+_Description: Kernel version mismatch
+
+Template: debian-installer-launcher/kernel-mismatch/error
+Type: error
+# :sl3:
+#flag:comment:2,3
+# Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+# 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+_Description: Live system kernel and installer kernel don't match
+ The installer can only be used if the kernel versions of the live system
+ (${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same.
+ .
+ Please reboot with the correct kernel (${DI_KERNEL}).

@@ -1,0 +1,114 @@
+#!/bin/sh
+
+# This script can launch a Debian Installer instance. It has multiple plugins
+# that must provide the following methods:
+#
+#  - <plugin>_usage
+#  - <plugin>_cleanup
+#  - <plugin>_prepare
+#  - <plugin>_run
+
+set -e
+
+call_for_plugin()
+{
+	plugin=$1
+	method=$2
+	shift 2
+
+	args="$@"
+
+	if ! ${plugin}_${method} $args; then
+		return 1
+	fi
+
+	return 0
+}
+
+call_for_plugins()
+{
+	method=$1
+	shift
+
+	args="$@"
+
+	for p in $PLUGINS; do
+		call_for_plugin $p $method $args
+	done
+}
+
+usage()
+{
+	cat <<EOF
+Debian Installer Launcher
+
+OPTIONS:
+
+   -p, --plugin  Plugin to use
+
+$(call_for_plugins "usage")
+
+
+
+EOF
+}
+
+run_hook_scripts() {
+	if [ -d /usr/share/debian-installer-launcher/hooks ]; then
+		run-parts "$@" /usr/share/debian-installer-launcher/hooks
+	fi
+}
+
+cleanup()
+{
+	call_for_plugins "cleanup"
+	run_hook_scripts --reverse --arg=cleanup
+}
+
+PLUGINS_DIR="/usr/share/debian-installer-launcher/plugins"
+PLUGINS=""
+PLUGIN=""
+
+# Setup cleanup function
+trap 'cleanup' EXIT HUP INT QUIT TERM
+
+# For easy development, override it in case we are in the source tree
+[ -x debian-installer-launcher ] && PLUGINS_DIR="plugins"
+
+# Load plugins
+for p in $PLUGINS_DIR/*; do
+	. $p
+	PLUGINS="${p#$PLUGINS_DIR/} $PLUGINS"
+done
+
+# Default to live plugin on live systems
+if [ -e /lib/live/mount/medium ]; then
+	PLUGIN=live
+else
+	PLUGIN=kexec
+fi
+
+# Handle generic launcher arguments
+for arg in $@; do
+	case "$arg" in
+		-h|--help)
+			usage
+			exit 0
+			;;
+		-p=*|--plugin=*)
+			PLUGIN=${arg#*=}
+			;;
+	esac
+done
+
+# Check for plugin
+if ! echo $PLUGINS | grep -q $PLUGIN; then
+	echo "ERROR: '$PLUGIN' is not a valid plugin. Check and try again."
+	exit 1
+fi
+
+run_hook_scripts --arg=startup
+
+if call_for_plugin $PLUGIN "prepare" $@; then
+	call_for_plugin $PLUGIN "run"
+fi

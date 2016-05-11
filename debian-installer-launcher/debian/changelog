@@ -1,0 +1,318 @@
+debian-installer-launcher (24+parrot1) testing; urgency=medium
+
+  * Update for parrot 3 stable
+
+ -- Lorenzo "Palinuro" Faletra <eclipse@parrotsec.org>  Wed, 11 May 2016 22:52:34 +0200
+
+debian-installer-launcher (24+parrot0) testing; urgency=medium
+
+  * Forked for Parrot Security
+
+ -- Lorenzo "Palinuro" Faletra <eclipse@frozenbox.org>  Sun, 17 Apr 2016 10:28:18 +0200
+
+debian-installer-launcher (24) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 14 Feb 2016 17:43:13 +0100
+
+debian-installer-launcher (23) unstable; urgency=medium
+
+  [ Paul Wise ]
+  * Switch from packages.qa.d.o to tracker.d.o
+
+  [ Iain R. Learmonth ]
+  * Added French translation to desktop file. (Closes: #799297)
+   - Thanks trebmuh!
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 13 Dec 2015 17:03:17 +0000
+
+debian-installer-launcher (22) unstable; urgency=medium
+
+  * debian/control:
+    - Added myself to Uploaders.
+    - Removed lsb-releasse from Build-Depends.
+  * debian/rules:
+    - Removed override_dh_builddeb section, -Zxz is default behaviour and
+      -z9 is unnecessary.
+    - Removed override_dh_install section. updating of the menu icon text
+      is now performed in the source package again, not using lsb_release.
+      (Closes: #787131)
+
+ -- Iain R. Learmonth <irl@debian.org>  Sat, 22 Aug 2015 21:40:11 +0100
+
+debian-installer-launcher (21+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add sudo to Depends. (Closes: #784045)
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 16 Aug 2015 14:20:28 +0100
+
+debian-installer-launcher (21) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 25 Jul 2015 18:28:50 +0200
+
+debian-installer-launcher (20) unstable; urgency=medium
+
+  * Update Standards to 3.9.6 (checked)
+
+  [ Updated translations ]
+  * Turkish (tr.po) by Mert Dirik
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Jun 2015 06:34:19 +0200
+
+debian-installer-launcher (19) unstable; urgency=low
+
+  [ Updated translations ]
+  * Tajik (tg.po) by Victor Ibragimov
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 06 Sep 2013 19:44:25 +0200
+
+debian-installer-launcher (18) unstable; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * Set Vcs-* to canonical format.
+
+  [ Christian Perrier ]
+  * Add myself to Uploaders
+  * Fix Dep-5 copyright syntax : the licence test must follow the
+    'Files' line and not be isolated
+  * Separate files by whitespaces in debian/copyright
+  * Update Standards to 3.9.4 (checked)
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 20 Jul 2013 07:52:11 +0200
+
+debian-installer-launcher (17) unstable; urgency=low
+
+  [ Raphaël Hertzog ]
+  * Ensure to always provide a sane TERM variable to d-i. This fixes problems
+    with d-i not loading the preseed file. Closes: #704065
+  * Add hooks to allow other packages to temporarily tweak the system while
+    d-i is running. See /usr/share/debian-installer-launcher/hooks/README.
+  * Ensure that /run/lock exists in the d-i chroot (mimick what /init does
+    in the initrd).
+
+ -- Ben Armstrong <synrg@sanctuary.nslug.ns.ca>  Sun, 28 Apr 2013 17:15:41 -0300
+
+debian-installer-launcher (16) unstable; urgency=low
+
+  * Use tmpfs and lazy unmount to ensure safe cleanup.
+    Thanks to Bastian Blank <waldi@debian.org>. (Closes: #703979).
+  * Ensure chroot inherits DISPLAY from caller to make
+    install from console possible again.
+
+ -- Ben Armstrong <synrg@sanctuary.nslug.ns.ca>  Sat, 30 Mar 2013 10:37:55 -0300
+
+debian-installer-launcher (15) unstable; urgency=low
+
+  * Correctly identifying syslogd/klogd processes to kill when cleaning up
+    since they can no longer be identified as the only processes within the
+    filesystem using the old criteria. (Closes: #702335).
+  * Using text mode installer when requested. Thanks to
+    "Loving, Kent" <kent.loving@boeing.com> and
+    "Rui Miguel P. Bernardo" <rui.bernardo.pt@gmail.com>. (Closes: #673450).
+  * Adding myself to Uploaders.
+
+ -- Ben Armstrong <synrg@sanctuary.nslug.ns.ca>  Sun, 24 Mar 2013 16:28:46 -0300
+
+debian-installer-launcher (14) unstable; urgency=low
+
+  [ Updated translations ]
+  * Catalan (ca.po) by Jordi Mallach
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 10 Dec 2012 07:02:11 +0100
+
+debian-installer-launcher (13) unstable; urgency=low
+
+  * Switching to xz compression.
+  * Updating to standards version 3.9.3.
+  * Updating copyright to format version 1.0.
+  * Harmonizing readme file.
+  * Including todo file in package.
+  * Sorting depends.
+  * Adding menu to depends (Closes: #663698).
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 30 Jun 2012 18:52:22 +0200
+
+debian-installer-launcher (12) unstable; urgency=low
+
+  * Team upload
+  * Replace XC-Package-Type by Package-Type
+
+  [ Updated translations ]
+  * Tibetan (bo.po) by Tennom
+  * Welsh (cy.po) by Dafydd Tomos
+  * Lithuanian (lt.po) by Rimas Kudelis
+  * Latvian (lv.po) by Rūdolfs Mazurs
+  * Macedonian (mk.po) by Arangel Angov
+  * Panjabi (pa.po) by A S Alam
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 15 Jun 2012 19:35:35 +0200
+
+debian-installer-launcher (11) unstable; urgency=low
+
+  [ Updated translations ]
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Indonesian (id.po) by Mahyuddin Susanto
+
+ -- Otavio Salvador <otavio@debian.org>  Thu, 15 Mar 2012 14:41:30 -0300
+
+debian-installer-launcher (10) unstable; urgency=low
+
+  * Passing hosts /proc/cmdline options to d-i within the chroot
+    (Closes: #610133).
+  * Updating to debhelper version 9.
+  * Using compression level 9 also for binary packages.
+  * Updating year in copyright.
+
+ -- Daniel Baumann <daniel.baumann@progress-technologies.net>  Sat, 04 Feb 2012 17:08:44 +0100
+
+debian-installer-launcher (9) unstable; urgency=low
+
+  * Updating desktop icon text and comment by using lsb-release to
+    determine distributor and release specific components.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 04 Feb 2012 14:19:13 +0100
+
+debian-installer-launcher (8) unstable; urgency=low
+
+  * Updating package to debhelper version 8.
+  * Updating package to standards version 3.9.2.
+  * Downgrading recommends to kexec-tools to suggests for the time
+    being.
+  * Updating year in copyright.
+  * Compacting copyright file.
+  * Updating todo file.
+  * Updating manpage to match the currently launcher options and
+    behaviour.
+  * Replacing desktop icon with a better one from the tango icons
+    project.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 29 Oct 2011 19:39:54 +0200
+
+debian-installer-launcher (7) unstable; urgency=low
+
+  *Team upload
+
+  [ Daniel Baumann ]
+  * Removing bashism when exporting variables.
+
+  [ Updated translations ]
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Czech (cs.po) by Miroslav Kure
+  * Esperanto (eo.po) by Felipe Castro
+  * Spanish (es.po) by Javier Fernández-Sanguino
+  * Georgian (ka.po) by Aiet Kolkhi
+  * Korean (ko.po) by Changwoo Ryu
+  * Nepali (ne.po)
+  * Romanian (ro.po) by Eddy Petrișor
+  * Slovak (sk.po) by Ivan Masár
+  * Swedish (sv.po) by Daniel Nylander
+  * Telugu (te.po) by Arjuna Rao Chavala
+  * Thai (th.po) by Theppitak Karoonboonyanan
+  * Uyghur (ug.po) by Sahran
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 24 Apr 2011 14:58:31 +0200
+
+debian-installer-launcher (5) unstable; urgency=low
+
+  [ Updated translations ]
+  * Dzongkha (dz.po) by Jurmey Rabgay
+  * Central Khmer (km.po) by Khoem Sokhem
+  * Lao (lo.po) by Anousak Souphavanh
+  * Latvian (lv.po) by Aigars Mahinovs
+  * Malayalam (ml.po) by Praveen Arimbrathodiyil
+  * Portuguese (Brazil) (pt_BR.po) by Felipe Augusto van de Wiel
+  * Sinhala (si.po) by Danishka Navin
+  * Slovenian (sl.po) by Vanja Cvelbar
+  * Telugu (te.po) by Arjuna Rao Chavala
+
+ -- Otavio Salvador <otavio@debian.org>  Fri, 24 Dec 2010 19:52:08 -0200
+
+debian-installer-launcher (4) unstable; urgency=low
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Viktar Siarheichyk
+  * Bengali (bn.po) by Israt Jahan
+  * Catalan (ca.po) by Jordi Mallach
+  * Danish (da.po) by Ask Hjorth Larsen
+  * Greek, Modern (1453-) (el.po) by Emmanuel Galatoulas
+  * Esperanto (eo.po) by Felipe Castro
+  * Estonian (et.po) by Mattias Pldaru
+  * Hungarian (hu.po) by SZERVC Attila
+  * Indonesian (id.po) by Arief S Fitrianto
+  * Icelandic (is.po) by Sveinn  Felli
+  * Kazakh (kk.po) by Baurzhan Muftakhidinov
+  * Korean (ko.po) by Changwoo Ryu
+  * Dutch (nl.po) by Eric Spreen
+  * Panjabi (pa.po) by A S Alam
+  * Polish (pl.po) by Bartosz Fenski
+  * Tamil (ta.po) by Dr.T.Vasudevan
+  * Turkish (tr.po) by Mert Dirik
+  * Ukrainian (uk.po) by Borys Yanovych
+  * Vietnamese (vi.po) by Clytie Siddall
+
+ -- Otavio Salvador <otavio@ossystems.com.br>  Fri, 12 Nov 2010 15:13:25 -0200
+
+debian-installer-launcher (3) unstable; urgency=low
+
+  * Team upload.
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Ossama M. Khayat
+  * Asturian (ast.po) by maacub
+  * Bulgarian (bg.po) by Damyan Ivanov
+  * Czech (cs.po) by Miroslav Kure
+  * Danish (da.po) by Jacob Sparre Andersen
+  * German (de.po) by Holger Wansing
+  * Spanish (es.po) by Javier Fernández-Sanguino
+  * Basque (eu.po) by Piarres Beobide
+  * Persian (fa.po) by Behrad Eslamifar
+  * Finnish (fi.po) by Esko Arajärvi
+  * French (fr.po) by Christian Perrier
+  * Galician (gl.po) by Jorge Barreiro
+  * Hebrew (he.po) by Lior Kaplan
+  * Hindi (hi.po) by Kumar Appaiah
+  * Italian (it.po) by Milo Casagrande
+  * Japanese (ja.po) by Kenshi Muto
+  * Lithuanian (lt.po) by Kęstutis Biliūnas
+  * Marathi (mr.po) by Sampada
+  * Bokmål, Norwegian (nb.po) by Hans Fredrik Nordhaug
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Romanian (ro.po) by ioan-eugen STAN
+  * Russian (ru.po) by Yuri Kozlov
+  * Slovak (sk.po) by Ivan Masár
+  * Serbian (sr.po) by Karolina Kalic
+  * Swedish (sv.po) by Daniel Nylander
+  * Thai (th.po) by Theppitak Karoonboonyanan
+  * Turkish (tr.po) by Mert Dirik
+  * Simplified Chinese (zh_CN.po) by YunQiang Su
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 28 Aug 2010 18:57:02 +0200
+
+debian-installer-launcher (2) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Adding reworked layout with plugin infrastructure together with Otavio.
+
+  [ Otavio Salvador ]
+  * Stop asking about how to open the installer.
+
+  [ Daniel Baumann ]
+  * Correcting typo in mount loop.
+
+  [ Otavio Salvador ]
+  * Don't call run method in case prepare fails
+  * Fix --text support in live plugin
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 03 Aug 2010 07:47:20 +0200
+
+debian-installer-launcher (1) unstable; urgency=low
+
+  * Initial release, formerly known as live-installer-launcher.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 01 Aug 2010 06:51:24 +0200

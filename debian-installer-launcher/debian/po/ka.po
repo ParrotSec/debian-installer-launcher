@@ -1,0 +1,69 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# Georgian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+# Aiet Kolkhi <aietkolkhi@gmail.com>, 2005, 2006, 2007, 2008.
+#
+# This file is maintained by Aiet Kolkhi <aietkolkhi@gmail.com>
+#
+# Includes contributions by Malkhaz Barkalaza <malxaz@gmail.com>,
+# Alexander Didebulidze <didebuli@in.tum.de>, Vladimer Sichinava <vlsichinava@gmail.com>
+# Taya Kharitonashvili <taya13@gmail.com>, Gia Shervashidze - www.gia.ge
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer.2006071\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2011-03-01 12:49+0400\n"
+"Last-Translator: Aiet Kolkhi <aietkolkhi@gmail.com>\n"
+"Language-Team: Georgian\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "კერნელის ვერსიის შეუთავსებლობა"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr ""
+"Live-სისტემის კერნელი და ინსტალაციის პროგრამის კერნელი ურთიერთთავსებადი არ "
+"არის"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"ინსტალაციის პროგრამის გამოყენება მხოლოდ იმ შემთხვევაში არის შესაძლებელი, თუ "
+"live-სისტემის (${LIVE_KERNEL}) და ინსტალაციის პროგრამის (${DI_KERNEL}) "
+"კერნელების ვერსიები ემთხვევა."
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "გთხოვთ გადატვირთოთ სწორი კერნელის მითითებით (${DI_KERNEL})."

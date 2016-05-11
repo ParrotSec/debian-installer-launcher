@@ -1,0 +1,69 @@
+# THIS FILE IS GENERATED AUTOMATICALLY FROM THE D-I PO MASTER FILES
+# The master files can be found under packages/po/
+#
+# DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
+#
+# translation of debian-installer_packages_po_sublevel1_ne.po to Nepali
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2006.
+# Shiva Pokharel <pokharelshiva@hotmail.com>, 2006.
+# Shyam Krishna Bal <shyam@mpp.org.np>, 2006.
+# Shiva Prasad Pokharel <pokharelshiva@hotmail.com>, 2006.
+# Shiva Pokharel <shiva@mpp.org.np>, 2007, 2008.
+# Shiva Prasad Pokharel <pokharelshiv@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Shyam Krishna Bal <balshyam24@yahoo.com>, 2008.
+# Shiva Prasad Pokharel <shiva@mpp.org.np>, 2008, 2010, 2011.
+#
+# Translations from iso-codes:
+#   Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2006.
+# Shiva Prasad Pokharel <pokharelshiva@hotmail.com>, 2006, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer_packages_po_sublevel1_ne\n"
+"Report-Msgid-Bugs-To: debian-installer-launcher@packages.debian.org\n"
+"POT-Creation-Date: 2010-08-05 20:58+0000\n"
+"PO-Revision-Date: 2011-02-22 17:11-0600\n"
+"Last-Translator: Shiva Prasad Pokharel <shiva@mpp.org.np>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+
+#. Type: title
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:1001
+msgid "Kernel version mismatch"
+msgstr "Kernal संस्करण मिसम्याच"
+
+#. Type: error
+#. Description
+#. :sl3:
+#: ../debian-installer-launcher.templates:2001
+msgid "Live system kernel and installer kernel don't match"
+msgstr "live kernal प्रणाली र kernal इन्सटलर मेल खाएन"
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid ""
+"The installer can only be used if the kernel versions of the live system "
+"(${LIVE_KERNEL}) and of the installer (${DI_KERNEL}) are the same."
+msgstr ""
+"यदि live प्रणालीको kernal संस्करणहरू (${LIVE_KERNEL}) र इन्स्टलर kernal"
+"(${DI_KERNEL})उस्तै भए मात्रै इन्स्टलर प्रयोग गर्न पाइने छ। "
+
+#. Type: error
+#. Description
+#. :sl3:
+#. Both LIVE_KERNEL and DI_KERNEL are kernel version numbers, such as
+#. 2.6.32-5-486, 2.6.32-5-amd64, or 2.6.32-5-powerpc etc.
+#: ../debian-installer-launcher.templates:2001
+msgid "Please reboot with the correct kernel (${DI_KERNEL})."
+msgstr "कृपया उचित kernal(${DI_KERNEL})संग रिबुट गर्नुहोस्।"

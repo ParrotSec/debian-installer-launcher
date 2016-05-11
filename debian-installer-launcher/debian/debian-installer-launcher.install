@@ -1,0 +1,8 @@
+debian-installer-launcher	/usr/sbin
+plugins				/usr/share/debian-installer-launcher
+hooks				/usr/share/debian-installer-launcher
+*.8				/usr/share/man/man8
+*.desktop			/usr/share/applications
+*.png				/usr/share/icons
+*.sh				/usr/share/debian-installer-launcher
+*.xpm				/usr/share/pixmaps
